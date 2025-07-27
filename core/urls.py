@@ -20,8 +20,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),                        #Django admin
     path('', include('main.urls')),
+    path('cms/', include('wagtail.admin.urls')),            #Wagtail admin
+    path('documents', include('wagtail.documents.urls')),    #wagtail docs
+    path('', include('wagtail.urls'))                       #wagtail page rendering
+
 ]
 
 if settings.DEBUG:

@@ -16,6 +16,13 @@
             <a href="/services/">Services</a>
             <a href="/contact/">Contact</a>
         </nav>
+        <div>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </header>
     <section>
         <h2>Welcome to the future of ICT</h2>
