@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: core
+    env: python
+    #buildCommand: "./build.sh"
+    startCommand: "gunicorn core.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: core.settings
+      - key: SECRET_KEY    # ✅ Will be added manually on Render
+      - key: DEBUG         # ✅ Will be added manually on Render
+      - key: ALLOWED_HOSTS # ✅ Will be added manually on Render
+    autoDeploy: true       
