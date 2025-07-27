@@ -9,25 +9,36 @@
 </head>
 <body>
     <header>
-        <h1>WEB APP MVP</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about/">About</a>
-            <a href="/services/">Services</a>
-            <a href="/contact/">Contact</a>
-        </nav>
-        <div>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </header>
-    <section>
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <h1>WEB APP MVP</h1>
+                <nav>
+                    <a href="/">Home</a>
+                    <a href="/about/">About</a>
+                    <a href="/services/">Services</a>
+                    <a href="/contact/">Contact</a>
+                </nav>
+                    <section>
         <h2>Welcome to the future of ICT</h2>
         <p>Contact us via the following channels</p>
     </section>
+            </div>
+            </div>
+        </div>
+       
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6 col-sm-12">
+                 <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </header>
     <footer>
         <p>&copy; 2025 WEB APP MVP</p>
     </footer>
